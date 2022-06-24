@@ -1,0 +1,10 @@
+const { Router } = require("express");
+const ProdutoController = require("../controllers/ProdutoController");
+
+const router = Router();
+
+router
+  .post("/lista-de-compras/adiciona", ProdutoController.adicionaProduto)
+  .patch("/lista-de-compras/atualiza", ProdutoController.atualizaStatusDoProduto);
+
+module.exports = router;
